@@ -4,7 +4,7 @@ on: #triggers con el que se ejecutara
   push:
     branches: ["main"] #con cada push a la rama main. Podemos añadir otras ramas!
 
-    workflow_dispatch: #si no incluimos esto no podremos ejecutarlo manualmente.
+  workflow_dispatch: #si no incluimos esto no podremos ejecutarlo manualmente.
 
 jobs:
   build:
