@@ -1,0 +1,23 @@
+name: Guia GitHub Actions #Nombre del workflow
+
+on: #triggers con el que se ejecutara
+  push:
+    branches: ["main"] #con cada push a la rama main. Podemos añadir otras ramas!
+
+    workflow_dispatch: #si no incluimos esto no podremos ejecutarlo manualmente.
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3 #esta acción es importante ya que prepara el entorno de ejecución.
+
+      - name: Saludamos desde la terminal
+        run: echo "Hola! Espero que la guia este siendo de ayuda :)"
+
+      - name: separo
+        run: echo "-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-"
+
+      - name: saludo despedida
+        run: echo "adios!"
